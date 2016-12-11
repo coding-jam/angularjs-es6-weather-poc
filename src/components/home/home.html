@@ -1,0 +1,9 @@
+<div class="row" ng-controller="WeatherController as w">
+	<h1>Weater around you</h1>
+    <div ng-show="w.info != null">
+        <weather forecast="w.info"></weather>
+    </div>
+    <div ng-show="w.info == null">
+        Getting weather info...
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<h2>{{ctrl.forecast.name}}, {{ctrl.forecast.sys.country}}</h2>
+<div class="col-xs-2">
+    <div ng-repeat="weather in ctrl.forecast.weather" style="text-align: center">
+        <img ng-src="http://openweathermap.org/img/w/{{weather.icon}}.png" />
+        <p>{{weather.main}}</p>
+        <p>{{ctrl.forecast.dt * 1000 | date}}</p>
+    </div>
+</div>
+<div class="col-xs-10">
+    <p>Humidity: {{ctrl.forecast.main.humidity}}</p>
+    <p>Pressure: {{ctrl.forecast.main.pressure}}</p>
+    <p>Temp: {{ctrl.forecast.main.temp}}</p>
+    <p>Temp max: {{ctrl.forecast.main.temp_max}}</p>
+    <p>Temp min: {{ctrl.forecast.main.temp_min}}</p>
+</div>
